@@ -1,7 +1,9 @@
 from datetime import datetime
+from tqdm import tqdm
 import requests
 import re
 import sys
+
 
 print(''' 
 
@@ -41,12 +43,19 @@ def download_image_video():
                 extract_image_link = re.search(r'meta property="og:image" content=[\'"]?([^\'" >]+)', src)
                 image_link = extract_image_link.group()
                 final = re.sub('meta property="og:image" content="', '', image_link)
-                response = requests.get(final).content
+                _response = requests.get(final).content
+                file_size_request = requests.get(final, stream=True)
+                file_size = int(file_size_request.headers['Content-Length'])
+                block_size = 1024 
                 filename = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
-                f = open(filename + '.jpg', 'wb')
-                f.write(response)
-                f.close
+                t=tqdm(total=file_size, unit='B', unit_scale=True, desc=filename, ascii=True)
+                with open(filename + '.jpg', 'wb') as f:
+                    for data in file_size_request.iter_content(block_size):
+                        t.update(len(data))
+                        f.write(data)
+                t.close()
                 print("Image downloaded successfully")
+
 
             if final == "video": 
                 msg = input("You are trying to download a video. Do you want to continue? (Yes or No): ".lower())
@@ -55,12 +64,19 @@ def download_image_video():
                     extract_video_link = re.search(r'meta property="og:video" content=[\'"]?([^\'" >]+)', src)
                     video_link = extract_video_link.group()
                     final = re.sub('meta property="og:video" content="', '', video_link)
-                    response = requests.get(final).content
+                    _response = requests.get(final).content
+                    file_size_request = requests.get(final, stream=True)
+                    file_size = int(file_size_request.headers['Content-Length'])
+                    block_size = 1024 
                     filename = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
-                    f = open(filename + '.mp4', 'wb')
-                    f.write(response)
-                    f.close
+                    t=tqdm(total=file_size, unit='B', unit_scale=True, desc=filename, ascii=True)
+                    with open(filename + '.mp4', 'wb') as f:
+                        for data in file_size_request.iter_content(block_size):
+                            t.update(len(data))
+                            f.write(data)
+                    t.close()
                     print("Video downloaded successfully")
+
                 if msg == "no":
                     exit()  
         else:
