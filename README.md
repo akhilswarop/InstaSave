@@ -7,7 +7,12 @@ InstaSave is a python script to download images, videos & profile pictures from 
 - [x] Download Instagram Profile Pictures
 
 
-![0NMjA8r7jA](https://user-images.githubusercontent.com/55880211/76549559-ae573e00-64b6-11ea-9f9a-6b4236e1ff78.gif)
+
+<p align="center">
+  <img width="80%" src="https://user-images.githubusercontent.com/55880211/76755427-da6e0a00-67a9-11ea-8f76-465c2ca162fd.gif">
+  <img width="80%" src="https://user-images.githubusercontent.com/55880211/76755555-13a67a00-67aa-11ea-9507-9859239a85c0.gif">
+</p>
+
 
 ### Git Installation
 ```
