@@ -111,10 +111,7 @@ def pp_download():
         if check_url1:
             alpha = check_url1.group()
             final_url = re.sub('\\?hl=[a-z-]{2,5}', '?__a=1', alpha)
-
-        else:
-            print("Unknown URL")
-
+            
     try:
         if check_url3 or check_url4 or check_url2 or check_url1:
             req = requests.get(final_url)
@@ -155,7 +152,6 @@ if connection() == True:
                 if select == 'Q':
                     sys.exit()
                 else:
-                    print("Unknown Selection")
                     sys.exit()
             except (KeyboardInterrupt):
                  print("Programme Interrupted")
