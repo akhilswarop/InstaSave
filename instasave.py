@@ -8,7 +8,7 @@ import sys
 print(''' 
 
 01001001 01101110 01110011 01110100 01100001 01010011 01100001 01110110 01100101 
-                        [Coded By Sameera a.k.a άλφα Χ]
+                        [Coded By Sameera Madushan]
 
 ''')
 
