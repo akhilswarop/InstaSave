@@ -40,4 +40,4 @@ If you are downloading copyrighted content you should respect author's rights an
 - Contributions of any kind welcome!
 
 ## License
-GPL-3.0 ©sameera-madushan
+GPL-3.0 ©[sameera-madushan](https://github.com/sameera-madushan)
