@@ -34,3 +34,10 @@ python instasave.py
 
 ## For your Attention
 If you are downloading copyrighted content you should respect author's rights and use the content either for personal purposes or for non-commercial needs with proper mention and authorisation from the author.
+
+### Support & Contributions
+- Please ⭐️ this repository if this project helped you!
+- Contributions of any kind welcome!
+
+## License
+GPL-3.0 ©sameera-madushan
