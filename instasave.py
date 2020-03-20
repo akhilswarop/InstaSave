@@ -13,6 +13,7 @@ print('''
 ''')
 
 #Function to check the internet connection
+#Got this from https://stackoverflow.com/a/24460981
 def connection(url='http://www.google.com/', timeout=5):
     try:
         req = requests.get(url, timeout=timeout)
