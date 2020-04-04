@@ -1,4 +1,9 @@
 # InstaSave - Instagram Downloader
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/55880211/78421236-b64c6d00-7673-11ea-99be-43e665c35f58.png">
+</p>
+
 InstaSave is a python script to download images, videos & profile pictures from Instagram without any API access. 
 
 ### Features
